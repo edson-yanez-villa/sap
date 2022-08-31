@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Ssystema de administracion de personas (SAP)</h1>
+    <div>
+        {{no_personas}}
+    </div>
+    <div>
+        <ul>
+            {% for persona in personas %}
+                <li>
+                    Persona {{persona.id}}:
+                    {{persona.nombre}}
+                    {{persona.apellido}}
+                    {{persona.email}}
+                    <a href="detalle_persona/{{persona.id}}">Ver detalles</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
